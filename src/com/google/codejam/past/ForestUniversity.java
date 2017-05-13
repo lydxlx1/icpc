@@ -1,3 +1,5 @@
+package com.google.codejam.past;
+
 import javax.xml.transform.Source;
 import java.io.File;
 import java.io.FileNotFoundException;

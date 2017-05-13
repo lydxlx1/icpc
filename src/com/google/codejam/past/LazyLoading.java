@@ -1,3 +1,5 @@
+package com.google.codejam.past;
+
 import java.io.*;
 import java.util.Arrays;
 import java.util.Scanner;

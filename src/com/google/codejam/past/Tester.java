@@ -1,3 +1,5 @@
+package com.google.codejam.past;
+
 import java.util.function.Predicate;
 
 public class Tester {

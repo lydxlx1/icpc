@@ -1,3 +1,5 @@
+package com.google.codejam.past;
+
 import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
