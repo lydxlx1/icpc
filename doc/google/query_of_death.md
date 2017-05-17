@@ -28,4 +28,9 @@ We can show that $\Omega(\log n)$ is the lower bound if every number can be read
 
 
 
-It is surprising to see that if we do not limit the number of times each number can accessed, only **3** machines will be sufficient.
+It is surprising to see that if we do not limit the number of times each number can accessed, only **3** machines will be sufficient. Here is the algorithm.
+
+* Machine 1 calls `get(0)`, `get(1)`, ..., `get(n-1)` sequentially and stores these values as $a_0, a_1, \dots, a_{n-1}$.
+* Machine 2 calls `get(n-1)`, `get(n-2)`, ..., `get(0)` sequentially and stores these values as $b_{n-1}, b_{n-2}, \dots, b_0$.
+* If $a_i = b_i$, then the correct at the $i$-th position is just $a_i$.
+* Finally, Machine 3 calls `get(i)` for all those indices $i$ such that $a_i \neq b_i$. No particular order is required at this step.
