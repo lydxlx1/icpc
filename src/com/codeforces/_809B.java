@@ -44,9 +44,6 @@ public class _809B {
     static int step2A(int left, int right) throws Exception {
         while (left < right) {
             int mid = (left + right) / 2; // floor
-            if (mid - 1 >= left)
-                mid--;
-
             if (noWorseThanRight(mid))
                 right = mid;
             else
@@ -61,15 +58,12 @@ public class _809B {
     static int step2B(int left, int right) throws Exception {
         while (left < right) {
             int mid = (left + right + 1) / 2; // ceiling
-            if (mid + 1 <= right)
-                mid++;
-
             if (noWorseThanLeft(mid))
                 left = mid;
             else
                 right = mid - 1;
         }
-        return left;
+        return left; // guarantee to be ordered
     }
 
     public static void main(String[] args) throws Exception {
