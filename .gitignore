@@ -4,3 +4,5 @@ bin/
 *.in
 *.out
 .idea/
+in
+out
