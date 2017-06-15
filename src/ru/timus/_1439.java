@@ -62,9 +62,12 @@ public class _1439 {
             }
             if (smallerTotal > 0) {
                 if (bigger.isEmpty()) throw new RuntimeException("Bigger part cannot be empty if smallerTotal > 0");
-                int begin = bigger.get(bigger.size() - 1).begin;
-                smaller.add(new Node(begin, begin + smallerTotal - 1));
-                bigger.get(bigger.size() - 1).begin += smallerTotal;
+                Node minBigger = bigger.get(bigger.size() - 1);
+                smaller.add(new Node(minBigger.begin, minBigger.begin + smallerTotal - 1)); // This node is always meaningful
+
+                minBigger.begin += smallerTotal; // This node might need to be deleted
+                if (minBigger.begin > minBigger.end)
+                    bigger.remove(bigger.size() - 1);
             }
 
             smaller.add(null);
