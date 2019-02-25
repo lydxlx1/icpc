@@ -1,6 +1,6 @@
 """Codeforces 1131F
 
-Somehow, recursive implementation of Union-Find Algorithm will hit stack over...
+Somehow, recursive implementation of Union-Find Algorithm will hit stack overflow...
 """
 from sys import *
 
