@@ -1,12 +1,30 @@
+package com.codeforces;
+
 import java.io.*;
 import java.util.StringTokenizer;
 import java.util.*;
 
-public class Main {
+public class _1367B {
 
     public static void main(String[] args) throws Exception {
         Reader.init(System.in);
         BufferedWriter cout = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int T = Reader.nextInt();
+        while (T-- > 0) {
+            int N = Reader.nextInt();
+            int[] cnt = {0, 0};
+            for (int i = 0; i < N; i++) {
+                if (Reader.nextInt() % 2 != i % 2) {
+                    cnt[i % 2]++;
+                }
+            }
+            if (cnt[0] == cnt[1]) {
+                System.out.println(cnt[0]);
+            } else {
+                System.out.println(-1);
+            }
+        }
 
         cout.close();
     }
