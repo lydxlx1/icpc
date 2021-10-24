@@ -8,4 +8,8 @@ in
 out
 .DS_Store
 Solution.java
+*.class
+Main.py
 Main.java
+src/Main.java
+src/Main.py
