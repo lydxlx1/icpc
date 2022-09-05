@@ -1,10 +1,13 @@
+package others;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
+import java.util.TreeMap;
 
-public class CoprimeSegment {
+public class SegmentsWithSmallSpread {
 
     static {
         Reader.init(System.in);
@@ -17,13 +20,26 @@ public class CoprimeSegment {
 
     public static void main(String[] args) throws Exception {
         int n = Reader.nextInt();
+        long k = Long.parseLong(Reader.next());
         long[] a = new long[n];
         for (int i = 0; i < n; i++) {
             a[i] = Long.parseLong(Reader.next());
         }
-
-        int ans = dfs(a, new long[n], 0, n - 1);
-        System.out.println(ans < (1 << 29) ? ans : -1);
+        long ans = 0;
+        TreeMap<Long, Integer> tree = new TreeMap<>();
+        for (int l = 0, r = 0; r < n; r++) {
+            tree.put(a[r], tree.getOrDefault(a[r], 0) + 1);
+            while (tree.lastKey() - tree.firstKey() > k) {
+                long key = a[l];
+                tree.put(key, tree.get(key) - 1);
+                if (tree.get(key) == 0) {
+                    tree.remove(key);
+                }
+                l++;
+            }
+            ans += r - l + 1;
+        }
+        System.out.println(ans);
     }
 
     static int dfs(long[] a, long[] tmp, int l, int r) {
