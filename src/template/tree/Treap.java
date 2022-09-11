@@ -39,6 +39,16 @@ public class Treap {
         }
     }
 
+    public void inorder() {
+        if (left != null) {
+            left.inorder();
+        }
+        System.err.println(String.format("key=%d, size=%d", key, size));
+        if (right != null) {
+            right.inorder();
+        }
+    }
+
     static Treap[] split(Treap root, int key) {
         int smallerSize = 0, biggerSize = 0;
         while (root != null)
