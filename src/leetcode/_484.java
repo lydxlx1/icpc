@@ -1,6 +1,6 @@
 package leetcode;
 
-import org.junit.Test;
+//import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
 import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
-import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertEquals;
 
 /**
  * LeetCode 484 - Find Permutation
@@ -62,30 +62,30 @@ public class _484 {
         return ans;
     }
 
-    @Test
-    public void test() {
-        List<Integer> expected;
-        List<Integer> actual;
-        String s;
-
-        s = "II";
-        expected = Arrays.asList(1, 2, 3);
-        actual = IntStream.of(sol.findPermutation(s)).boxed().collect(toList());
-        assertEquals(expected, actual);
-
-        s = "DD";
-        expected = Arrays.asList(3, 2, 1);
-        actual = IntStream.of(sol.findPermutation(s)).boxed().collect(toList());
-        assertEquals(expected, actual);
-
-        s = "DDDI";
-        expected = Arrays.asList(4, 3, 2, 1, 5);
-        actual = IntStream.of(sol.findPermutation(s)).boxed().collect(toList());
-        assertEquals(expected, actual);
-
-        s = "";
-        expected = Arrays.asList(1);
-        actual = IntStream.of(sol.findPermutation(s)).boxed().collect(toList());
-        assertEquals(expected, actual);
-    }
+//    @Test
+//    public void test() {
+//        List<Integer> expected;
+//        List<Integer> actual;
+//        String s;
+//
+//        s = "II";
+//        expected = Arrays.asList(1, 2, 3);
+//        actual = IntStream.of(sol.findPermutation(s)).boxed().collect(toList());
+//        assertEquals(expected, actual);
+//
+//        s = "DD";
+//        expected = Arrays.asList(3, 2, 1);
+//        actual = IntStream.of(sol.findPermutation(s)).boxed().collect(toList());
+//        assertEquals(expected, actual);
+//
+//        s = "DDDI";
+//        expected = Arrays.asList(4, 3, 2, 1, 5);
+//        actual = IntStream.of(sol.findPermutation(s)).boxed().collect(toList());
+//        assertEquals(expected, actual);
+//
+//        s = "";
+//        expected = Arrays.asList(1);
+//        actual = IntStream.of(sol.findPermutation(s)).boxed().collect(toList());
+//        assertEquals(expected, actual);
+//    }
 }
