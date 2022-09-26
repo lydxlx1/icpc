@@ -1,9 +1,9 @@
+package leetcode;
+
 import java.io.*;
 import java.util.*;
-import java.math.*;
-import java.util.stream.*;
 
-public class Solution {
+public class _2421_Number_Of_Good_Paths {
 
     int[] parent;
     int n;
@@ -96,7 +96,7 @@ public class Solution {
         Reader.init(System.in);
         BufferedWriter cout = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        Solution sol = new Solution();
+        _2421_Number_Of_Good_Paths sol = new _2421_Number_Of_Good_Paths();
         {
             int[] vals = {1, 3, 2, 1, 3};
             int[][] edges = {
