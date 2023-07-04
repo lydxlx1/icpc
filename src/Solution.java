@@ -9,6 +9,23 @@ public class Solution {
         Reader.init(System.in);
         BufferedWriter cout = new BufferedWriter(new OutputStreamWriter(System.out));
 
+        {
+            Solution sol = new Solution();
+        }
+        {
+            Solution sol = new Solution();
+        }
+        {
+            Solution sol = new Solution();
+        }
+        {
+            Solution sol = new Solution();
+        }
+        {
+            Solution sol = new Solution();
+        }
+
+
         cout.close();
     }
 

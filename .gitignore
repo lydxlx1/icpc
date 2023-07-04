@@ -14,4 +14,6 @@ input*
 output*
 in.*
 out.*
+src/.vscode
+doc/.watchman-cookie*
 
